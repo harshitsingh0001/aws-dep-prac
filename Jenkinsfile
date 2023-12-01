@@ -26,6 +26,8 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
+          sh 'sudo usermod -aG docker $USER'
+          sh 'sudo chown root:docker /var/run/docker.sock'
           sh 'docker build -t ec2harshit.latest .'
           }
           }
