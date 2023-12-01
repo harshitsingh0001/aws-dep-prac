@@ -7,12 +7,14 @@ pipeline {
     }
 
     environment {
-        mycred = credentials('docker-hub-pass')
+        mycred = credentials('docker-pass')
     }
 
     stages{
         stage("Initialize") {
-            echo(message: 'hello')
+            steps{
+                echo(message: 'hello')
+            }
         }
     }
 }
