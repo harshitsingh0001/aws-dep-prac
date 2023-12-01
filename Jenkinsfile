@@ -8,6 +8,8 @@ pipeline {
 
     environment {
         mycred = credentials('docker-pass')
+        DOCKER_IMAGE_NAME = 'EC2'
+        DOCKERFILE_PATH = 'Jenkinsfile'
     }
 
     stages{
@@ -26,7 +28,8 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
-          sh 'docker build -t ec2harshit.latest .'
+              docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
+
           }
           }
         }
