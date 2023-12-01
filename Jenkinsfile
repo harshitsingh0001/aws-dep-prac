@@ -23,6 +23,7 @@ pipeline {
         steps{
            script{
                 sh 'docker --version'
+                sh 'mvn --version'
                 sh 'java -version'
            }
         }
