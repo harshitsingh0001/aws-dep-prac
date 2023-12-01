@@ -10,6 +10,7 @@ pipeline {
         mycred = credentials('docker-pass')
         DOCKER_IMAGE_NAME = 'ecimage'
         DOCKERFILE_PATH = 'Jenkinsfile'
+        JENKINS_WORKSPACE = '/var/lib/jenkins/workspace/ec2'
     }
 
     stages{
@@ -28,6 +29,7 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
+              sh "sudo chown -R jenkins:jenkins ${JENKINS_WORKSPACE}"
               docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
 
           }
