@@ -9,7 +9,7 @@ pipeline {
     environment {
         mycred = credentials('docker-pass')
         DOCKER_IMAGE_NAME = 'ecimage'
-        DOCKERFILE_PATH = '/Dockerfile'
+        DOCKERFILE_PATH = 'EC2-practice/Dockerfile'
         JENKINS_WORKSPACE = '/var/lib/jenkins/workspace/ec2'
     }
 
