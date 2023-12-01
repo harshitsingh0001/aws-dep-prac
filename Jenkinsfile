@@ -23,7 +23,7 @@ pipeline {
         steps{
            script{
                 sh 'docker --version'
-                sh 'mvnw --version'
+                sh 'mvn --version'
            }
         }
         }
