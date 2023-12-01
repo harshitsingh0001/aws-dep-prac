@@ -16,12 +16,20 @@ pipeline {
                 echo(message: 'hello')
             }
         }
-        stage("checking docekr"){
+        stage("checking docekr available"){
         steps{
            script{
                 sh 'docker --version'
            }
         }
         }
+        stage("creating docker image from file"){
+          steps{
+          script{
+          sh 'docker build -t ec2harshit.latest .'
+          }
+          }
+        }
+
     }
 }
