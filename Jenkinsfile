@@ -8,7 +8,6 @@ pipeline {
 
     environment {
         mycred = credentials('docker-pass')
-        password
     }
 
     stages{
