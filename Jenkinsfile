@@ -3,7 +3,6 @@ pipeline {
     tools{
         jdk 'java17'
         maven 'maven'
-
     }
 
     environment {
@@ -16,7 +15,6 @@ pipeline {
         stage("Initialize") {
             steps{
                 echo(message: 'hello')
-                echo(script($env.JAVA_HOME))
             }
         }
         stage("checking docekr available"){
