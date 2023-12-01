@@ -1,9 +1,9 @@
 pipeline {
     agent any
-
     tools{
         jdk 'java17'
         maven 'maven'
+
     }
 
     environment {
@@ -12,7 +12,6 @@ pipeline {
         DOCKERFILE_PATH = 'Dockerfile'
         JENKINS_WORKSPACE = '/var/lib/jenkins/workspace/ec2'
     }
-
     stages{
         stage("Initialize") {
             steps{
@@ -26,13 +25,14 @@ pipeline {
                 sh 'docker --version'
                 sh 'java -version'
            }
-        }
+
         }
 
+        }
          stage("MAven") {
               steps{
               script {
-                    echo 'hello'
+                        echo(message: 'fd')    
               }
                 }}
         stage("creating docker image from file"){
