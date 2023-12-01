@@ -32,8 +32,7 @@ pipeline {
          stage("MAven") {
               steps{
               script {
-                sh 'mvn --version'
-                    }
+                    echo '$JAVA_HOME'
                 }}
         stage("creating docker image from file"){
           steps{
