@@ -16,5 +16,12 @@ pipeline {
                 echo(message: 'hello')
             }
         }
+        stage("checking docekr"){
+        steps{
+           script{
+                sh 'docker --version'
+           }
+        }
+        }
     }
 }
