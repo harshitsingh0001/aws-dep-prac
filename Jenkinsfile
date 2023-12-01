@@ -26,7 +26,7 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
-          sh 'docker builds build -t ec2harshit.latest .'
+          sh 'docker build -t ec2harshit.latest .'
           }
           }
         }
