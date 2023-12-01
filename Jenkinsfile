@@ -26,14 +26,13 @@ pipeline {
                 sh 'docker --version'
                 sh 'java -version'
            }
-
+        }
         }
 
-        }
          stage("MAven") {
               steps{
               script {
-
+                    echo 'hello'
               }
                 }}
         stage("creating docker image from file"){
