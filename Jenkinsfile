@@ -11,6 +11,8 @@ pipeline {
         DOCKER_IMAGE_NAME = 'ecimage'
         DOCKERFILE_PATH = 'Dockerfile'
         JENKINS_WORKSPACE = '/var/lib/jenkins/workspace/ec2'
+        JAR_FILE_PATH = "${JENKINS_WORKSPACE}/target/EC2-practice-0.0.1-SNAPSHOT.jar"
+
     }
 
     stages{
@@ -29,6 +31,7 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
+              sh "ls -l ${JAR_FILE_PATH}"
               docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
           }
           }
