@@ -3,6 +3,7 @@ pipeline {
     tools{
         jdk 'java17'
         maven 'maven'
+
     }
 
     environment {
@@ -36,6 +37,7 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
+              maven.env.JAVA_HOME
               docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
           }
           }
