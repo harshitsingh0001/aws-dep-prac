@@ -29,7 +29,6 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
-              sh "sudo chown -R jenkins:jenkins ${JENKINS_WORKSPACE}"
               docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
 
           }
