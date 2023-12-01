@@ -32,7 +32,8 @@ pipeline {
          stage("MAven") {
               steps{
               script {
-                    echo '$JAVA_HOME'
+                echo '$JAVA_HOME'
+                    }
                 }}
         stage("creating docker image from file"){
           steps{
