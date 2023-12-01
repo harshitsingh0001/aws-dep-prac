@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent
 
     tools{
         jdk 'java17'
@@ -17,6 +17,7 @@ pipeline {
         stage("Initialize") {
             steps{
                 echo(message: 'hello')
+                echo(script($env.JAVA_HOME))
             }
         }
         stage("checking docekr available"){
@@ -32,8 +33,8 @@ pipeline {
          stage("MAven") {
               steps{
               script {
-                echo '$JAVA_HOME'
-                    }
+
+              }
                 }}
         stage("creating docker image from file"){
           steps{
