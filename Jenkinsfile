@@ -28,12 +28,13 @@ pipeline {
 
         }
 
+        }
          stage("MAven") {
-                    steps{
+              steps{
+              script {
                 sh 'mvn --version'
                     }
-                }
-        }
+                }}
         stage("creating docker image from file"){
           steps{
           script{
