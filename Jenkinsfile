@@ -23,9 +23,10 @@ pipeline {
         steps{
            script{
                 sh 'docker --version'
-                sh 'mvn --version'
                 sh 'java -version'
+                sh 'mvn clean'
            }
+
         }
         }
         stage("creating docker image from file"){
