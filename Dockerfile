@@ -1,6 +1,6 @@
 FROM openjdk:17
 
-RUN mkdir ec2dir
+RUN mkdir -p ec2dir
 
 EXPOSE 8080
 
