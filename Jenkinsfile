@@ -29,10 +29,10 @@ pipeline {
                                  script {
                                      // Log in to Docker Hub
                                      bat 'docker login -u harshitkumar007 -p KQ2a!ucM4sxsQpb'
-                                   bat 'docker tag ec2/spring-boot:latest aws-deployment/ec2/spring-boot'
+                                   bat 'docker tag ec2/spring-boot  harshitkumar007/ec2/spring-boot'
 
                                      // Push the Docker image to Docker Hub
-                                    bat 'docker push harshitkumar007/aws-deployment:ec2/spring-boot'
+                                    bat 'docker push harshitkumar007/ec2/spring-boot'
                                  }
                              }
                          }
