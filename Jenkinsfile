@@ -14,7 +14,7 @@ pipeline {
                 }
                 stage ("docker image building"){
                 steps{
-                     bat 'docker build -t EC2IMAGE .'
+                     bat 'docker build -t ec2/spring-boot .'
                    }
                 }
     }
