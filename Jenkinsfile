@@ -2,7 +2,8 @@ pipeline {
     agent any
     tools{
         jdk 'java17'
-        maven 'maven'
+        maven '3.9.6'
+        gradle 'gradle'
     }
 
     environment {
@@ -15,6 +16,7 @@ pipeline {
         stage("Initialize") {
             steps{
                 echo(message: 'hello')
+
             }
         }
         stage("checking docekr available"){
@@ -22,6 +24,8 @@ pipeline {
            script{
                 sh 'docker --version'
                 sh 'java -version'
+                sh 'gradle -version'
+
            }
 
         }
@@ -30,7 +34,7 @@ pipeline {
          stage("Maven") {
               steps{
               script {
-                        echo(message: 'fd')    
+                        echo(message: 'fd')
               }
                 }}
         stage("creating docker image from file"){
