@@ -31,7 +31,7 @@ pipeline {
                                      bat 'docker login -u harshitkumar007 -p KQ2a!ucM4sxsQpb'
 
                                      // Push the Docker image to Docker Hub
-                                     bat "docker push ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+                                    bat 'docker push harshitkumar007/aws-deployment:tagname'
                                  }
                              }
                          }
