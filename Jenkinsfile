@@ -21,7 +21,7 @@ pipeline {
                 }
                 stage ("docker image building"){
                 steps{
-                     bat 'docker build -t ec2/spring-boot .'
+                     bat 'docker build -t ec2-spring .'
                    }
                 }
                  stage('Push to Docker Hub') {
@@ -29,10 +29,10 @@ pipeline {
                                  script {
                                      // Log in to Docker Hub
                                      bat 'docker login -u harshitkumar007 -p KQ2a!ucM4sxsQpb'
-                                   bat 'docker tag ec2/spring-boot  harshitkumar007/ec2/spring-boot'
+                                     bat 'docker tag ec2-spring  harshitkumar007/ec2-spring'
 
                                      // Push the Docker image to Docker Hub
-                                    bat 'docker push harshitkumar007/ec2/spring-boot'
+                                    bat 'docker push harshitkumar007/ec2-spring'
                                  }
                              }
                          }
