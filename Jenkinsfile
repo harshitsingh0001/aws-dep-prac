@@ -20,7 +20,7 @@ pipeline {
         stage("checking maven available"){
         steps{
            script{
-                sh 'mvn clean install'
+                sh 'mvn --version'
            }
 
         }
