@@ -22,7 +22,6 @@ pipeline {
            script{
                 sh 'docker --version'
                 sh 'java -version'
-                sh 'mvn -version'
            }
 
         }
