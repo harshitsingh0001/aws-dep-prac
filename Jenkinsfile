@@ -36,5 +36,12 @@ pipeline {
                                  }
                              }
                          }
+                         stage("ec2-spring deployed to AWS EC2"){
+                         steps {
+                         script{
+                                bat 'aws --version'
+                              }
+                            }
+                         }
     }
 }
