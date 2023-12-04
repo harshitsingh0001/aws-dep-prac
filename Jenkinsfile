@@ -17,22 +17,15 @@ pipeline {
 
             }
         }
-        stage("checking docekr available"){
+        stage("checking maven available"){
         steps{
            script{
                 sh 'mvn clean install'
-
            }
 
         }
 
         }
-         stage("Maven") {
-              steps{
-              script {
-                        echo(message: 'fd')
-              }
-                }}
         stage("creating docker image from file"){
           steps{
           script{
