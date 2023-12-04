@@ -40,9 +40,9 @@ pipeline {
                          stage("ec2-spring deployed to AWS EC2"){
                          steps {
                          script{
-                                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                                withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
                                        AWS("--region=eu-west-1 s3 ls")
-                                   }
+                                }
                               }
                             }
                          }
