@@ -20,10 +20,7 @@ pipeline {
         stage("checking docekr available"){
         steps{
            script{
-                sh 'docker --version'
-                sh 'java -version'
-                sh 'gradle -version'
-                sh 'mvn --version'
+                sh 'mvn clean install'
 
            }
 
