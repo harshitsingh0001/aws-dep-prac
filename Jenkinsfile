@@ -23,6 +23,7 @@ pipeline {
                 sh 'docker --version'
                 sh 'java -version'
                 sh 'gradle -version'
+                sh 'mvn --version'
 
            }
 
