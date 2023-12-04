@@ -23,7 +23,7 @@ pipeline {
         stage("creating docker image from file"){
           steps{
           script{
-              docker.build("${DOCKER_IMAGE_NAME}", "-f ${DOCKERFILE_PATH} .")
+                sh 'docker --version'
           }
           }
         }
