@@ -40,9 +40,8 @@ pipeline {
                          stage("ec2-spring deployed to AWS EC2"){
                          steps {
                          script{
-                                withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-                                       AWS("--region=eu-west-1 s3 ls")
-                                }
+                               bat 'ssh - i C:\Users\saksh\Downloads\conversion-scala.ppk ec2-user@35.154.150.170'
+
                               }
                             }
                          }
