@@ -6,13 +6,10 @@ pipeline {
                 echo(message: 'hello')
             }
         }
-        stage("checking maven available"){
-        steps{
-           script{
-                sh 'mvn --version'
-                sh 'java -version'
-           }
-        }
-       }
+          stage('Check Maven Version') {
+                    steps {
+                        bat 'mvn --version'
+                    }
+                }
     }
 }
