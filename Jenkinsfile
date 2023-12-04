@@ -12,5 +12,10 @@ pipeline {
                         bat 'mvn clean install'
                     }
                 }
+                stage ("docker image building"){
+                steps{
+                     bat 'docker build -t EC2IMAGE .'
+                   }
+                }
     }
 }
