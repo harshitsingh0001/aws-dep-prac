@@ -28,7 +28,7 @@ pipeline {
                              steps {
                                  script {
                                      // Log in to Docker Hub
-                                     bat "docker login -u 'harshit.kumar@bonamisoftware.com' -p 'KQ2a!ucM4sxsQpb' "
+                                     bat "docker login -u 'harshitkumar007' -p 'KQ2a!ucM4sxsQpb' "
 
                                      // Push the Docker image to Docker Hub
                                      bat "docker push ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
