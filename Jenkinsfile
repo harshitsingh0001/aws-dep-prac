@@ -36,8 +36,7 @@ pipeline {
                                  }
                              }
                          }
-                         @Library('github.com/releaseworks/jenkinslib') _
-                         node{
+
                          stage("ec2-spring deployed to AWS EC2"){
                          steps {
                          script{
@@ -47,6 +46,6 @@ pipeline {
                               }
                             }
                          }
-                         }
+
     }
 }
