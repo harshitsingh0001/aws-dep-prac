@@ -32,7 +32,7 @@ pipeline {
                                    bat 'docker tag ec2/spring-boot:latest aws-deployment/ec2/spring-boot'
 
                                      // Push the Docker image to Docker Hub
-                                    bat 'docker push harshitkumar007/aws-deployment/ec2/spring-boot'
+                                    bat 'docker push harshitkumar007/aws-deployment:ec2/spring-boot'
                                  }
                              }
                          }
