@@ -9,6 +9,7 @@ pipeline {
           stage('Check Maven Version') {
                     steps {
                         bat 'mvn --version'
+                        bat 'mvn clean install'
                     }
                 }
     }
