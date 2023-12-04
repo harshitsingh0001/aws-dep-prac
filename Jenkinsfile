@@ -3,7 +3,6 @@ pipeline {
     tools{
         jdk 'java17'
         maven 'maven'
-
     }
 
     environment {
@@ -23,12 +22,13 @@ pipeline {
            script{
                 sh 'docker --version'
                 sh 'java -version'
+                sh 'mvn -version'
            }
 
         }
 
         }
-         stage("MAven") {
+         stage("Maven") {
               steps{
               script {
                         echo(message: 'fd')    
